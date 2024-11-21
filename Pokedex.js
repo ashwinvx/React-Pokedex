@@ -1,26 +1,16 @@
-function Pokedex() {
-    const pokemonCharacters = [
-        { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
-        { id: 7, name: 'Squirtle', type: 'water', base_experience: 63 },
-        { id: 11, name: 'Metapod', type: 'bug', base_experience: 72 },
-        { id: 12, name: 'Butterfree', type: 'flying', base_experience: 178 },
-        { id: 25, name: 'Pikachu', type: 'electric', base_experience: 112 },
-        { id: 39, name: 'Jigglypuff', type: 'normal', base_experience: 95 },
-        { id: 94, name: 'Gengar', type: 'poison', base_experience: 225 },
-        { id: 133, name: 'Eevee', type: 'normal', base_experience: 65 }
-    ];
-
+function Pokedex({ pokemons, hand, isWinner }) {
     const imgURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
     return (
         <div class="container">
-            <h1>Pokedex</h1>
-            {pokemonCharacters.map(pokemon => {
+            <h1>Pokedex {hand}</h1>
+            {pokemons.map(pokemon => {
                 const img = imgURL + pokemon.id + '.png';
                 return (
                     <Pokecard name={pokemon.name} type={pokemon.type} exp={pokemon.base_experience} image={img}></Pokecard>
                 );
             })}
+            <h2>{hand == isWinner && "THIS HAND WINS!"}</h2>
         </div >
     );
 }

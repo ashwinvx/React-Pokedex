@@ -1,7 +1,7 @@
 function App() {
     return (
-        <Pokedex></Pokedex>
-    )
+        <Pokegame></Pokegame>
+    );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));

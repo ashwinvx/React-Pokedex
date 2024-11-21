@@ -24,6 +24,12 @@ h6 {
     margin: 15px 0px 0px 0px;
 }
 
+h2 {
+    color: red;
+    font-size: xx-large;
+    text-align: center;
+}
+
 .small-font{
     font-size: small;
     color: darkslategrey;
